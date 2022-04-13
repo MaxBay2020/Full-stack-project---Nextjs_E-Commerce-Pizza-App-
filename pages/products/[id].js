@@ -115,7 +115,7 @@ const Product = ({pizza}) => {
     );
 };
 
-export const getServerSideProps = async (context)=>{
+export const getStaticProps = async (context)=>{
     const {params}=context
     console.log(params.id)
     const response = await axios.get(`http://localhost:3000/api/products/${params.id}`)

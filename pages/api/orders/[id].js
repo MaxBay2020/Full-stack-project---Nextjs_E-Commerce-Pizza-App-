@@ -10,7 +10,7 @@ export const handler = async (req,res) => {
     switch(method){
         case 'GET':
             // get order by id
-            const order = await Order.findOne({_id: id})
+            const order = await Order.findById(id)
             res.send(order)
             break
         case 'PATCH':
