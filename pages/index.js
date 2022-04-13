@@ -30,7 +30,7 @@ export default function Home({pizzaList, admin}) {
   )
 }
 
-export const getStaticProps = async (context)=>{
+export const getServerSideProps = async (context)=>{
     const myCookie = context.req?.cookies || ''
     let admin=false
 

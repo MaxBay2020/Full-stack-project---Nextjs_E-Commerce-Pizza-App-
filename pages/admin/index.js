@@ -105,7 +105,7 @@ const Index = ({orders, products}) => {
     );
 }
 
-export const getStaticProps = async (context)=>{
+export const getServerSideProps = async (context)=>{
     const myCookie=context.req?.cookies || ''
 
     if(myCookie.token !== process.env.TOKEN){
